@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { UserContext } from "../context/UserContext";
 
 function UserProfile() {
-  const { user } = useContext(UserContext);
+  const { user } = useContext(UserContext); // must destructure exactly
 
   return (
     <div>
