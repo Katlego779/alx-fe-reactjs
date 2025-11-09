@@ -1,15 +1,21 @@
 import React, { useContext } from "react";
 import { UserContext } from "../context/UserContext";
 
-function UserProfile() {
-  const { user } = useContext(UserContext); // must destructure exactly
+const UserProfile = () => {
+  const { user, setUser } = useContext(UserContext);
+
+  const updateName = () => {
+    setUser({ ...user, name: "New Name" });
+  };
 
   return (
     <div>
-      <h1>{user.name}</h1>
+      <h2>User Profile</h2>
+      <p>Name: {user.name}</p>
       <p>Age: {user.age}</p>
+      <button onClick={updateName}>Change Name</button>
     </div>
   );
-}
+};
 
 export default UserProfile;
