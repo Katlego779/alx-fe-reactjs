@@ -5,7 +5,7 @@ export const UserContext = createContext();
 
 // Create the provider
 export const UserProvider = ({ children }) => {
-  const [user, setUser] = useState({ name: "Katlego", age: 25 }); // example state
+  const [user, setUser] = useState({ name: "", age: 0 }); // default empty state
 
   return (
     <UserContext.Provider value={{ user, setUser }}>
