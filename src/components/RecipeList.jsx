@@ -11,7 +11,10 @@ export default function RecipeList() {
   return (
     <div>
       {recipes.map((recipe) => (
-        <div key={recipe.id} style={{ border: "1px solid #ddd", padding: "8px", marginBottom: "8px" }}>
+        <div
+          key={recipe.id}
+          style={{ border: "1px solid #ddd", padding: "8px", marginBottom: "8px" }}
+        >
           <h3>{recipe.title}</h3>
           <p>{recipe.description}</p>
         </div>
