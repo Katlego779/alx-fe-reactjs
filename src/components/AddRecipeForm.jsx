@@ -15,17 +15,19 @@ export default function AddRecipeForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} style={{ marginBottom: 16 }}>
       <input
         type="text"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
         placeholder="Title"
+        style={{ display: "block", width: "100%", padding: 8, marginBottom: 8 }}
       />
       <textarea
         value={description}
         onChange={(e) => setDescription(e.target.value)}
         placeholder="Description"
+        style={{ display: "block", width: "100%", padding: 8, marginBottom: 8 }}
       />
       <button type="submit">Add Recipe</button>
     </form>
