@@ -1,7 +1,7 @@
 import { useContext } from 'react';
-import UserContext from '../UserContext';
+import { UserContext } from '../UserContext';
 
-const UserProfile = () => {
+function UserProfile() {
     const userData = useContext(UserContext);
 
     return (
@@ -11,6 +11,6 @@ const UserProfile = () => {
             <p>{userData.bio}</p>
         </div>
     );
-};
+}
 
 export default UserProfile;
